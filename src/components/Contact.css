@@ -1,0 +1,252 @@
+/* Section Contact */
+.contact-section {
+  padding: 80px 0;
+  background: transparent;
+  width: 100%;
+}
+
+.contact-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.contact-title {
+  color: #fff;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  text-align: left;
+  position: relative;
+}
+
+
+.contact-form {
+  width: 100%;
+  max-width: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  border-radius: 20px;
+  padding: 3rem;
+
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-label {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-control {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 24px 0 rgba(241, 239, 239, 0.18);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #667eea;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.2);
+  transform: translateY(-2px);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 120px;  
+}
+
+.btn-submit {
+  background: #18181b;
+  color: #fefefe;
+  border: 1px solid #232326;
+  border-radius: 12px;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+  box-shadow: 0 2px 8px rgba(248, 244, 244, 0.2);
+  font-family: 'Sora', Arial, sans-serif;
+}
+
+
+.btn-submit:hover {
+  background: #363693;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  border-color: #3a3a3d;
+}
+
+.btn-submit:active {
+  transform: translateY(-1px);
+}
+
+.btn-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.alert {
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.alert-success {
+  background: rgba(40, 167, 69, 0.2);
+  border: 1px solid rgba(40, 167, 69, 0.3);
+  color: #28a745;
+}
+
+.alert-danger {
+  background: rgba(220, 53, 69, 0.2);
+  border: 1px solid rgba(220, 53, 69, 0.3);
+  color: #dc3545;
+}
+
+/* Animations */
+.contact-section {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.contact-title {
+  animation: slideInLeft 0.8s ease-out;
+}
+
+.contact-form {
+  animation: slideInRight 0.8s ease-out;
+}
+
+.form-group {
+  animation: fadeInUp 0.6s ease-out;
+  animation-fill-mode: both;
+}
+
+.form-group:nth-child(1) { animation-delay: 0.1s; }
+.form-group:nth-child(2) { animation-delay: 0.2s; }
+.form-group:nth-child(3) { animation-delay: 0.3s; }
+.form-group:nth-child(4) { animation-delay: 0.4s; }
+
+.btn-submit {
+  animation: fadeInUp 0.6s ease-out 0.5s both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Design */
+@media (min-width: 1400px) {
+  .contact-section {
+    padding: 100px 0;
+  }
+  .contact-title {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .contact-title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 60px 0;
+  }
+  
+  .contact-container {
+    padding: 0 16px;
+  }
+  
+  .contact-title {
+    font-size: 2.5rem;
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+  
+  .contact-form {
+    padding: 2rem;
+    gap: 1.5rem;
+  }
+  
+  .form-control {
+    padding: 0.8rem 1rem;
+  }
+  
+  .btn-submit {
+    align-self: stretch;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-title {
+    font-size: 2rem;
+  }
+  
+  .contact-form {
+    padding: 1.5rem;
+  }
+  
+  .form-control {
+    padding: 0.7rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
