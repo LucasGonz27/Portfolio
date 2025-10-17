@@ -34,7 +34,7 @@ const Hero = () => {
         Développeur Web & Logiciel <span className="blinking">|</span>
       </h1>
       <div className="hero-btns" ref={buttonsRef}>
-        <a href="#" className="hero-btn">Download CV</a>
+        <a href="images/CV_Lucas_Gonzalez.pdf" className="hero-btn">Download CV</a>
         <a href="#contact" className="hero-btn secondary">Contact Me</a>
       </div>
     </main>
